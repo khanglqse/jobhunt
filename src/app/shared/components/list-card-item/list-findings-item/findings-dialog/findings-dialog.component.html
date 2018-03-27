@@ -1,0 +1,28 @@
+<header>
+  <h2>CREATE A FINDING</h2>
+  <button mat-icon-button mat-dialog-close>
+    <mat-icon>close</mat-icon>
+  </button>
+</header>
+<mat-dialog-content>
+  <div class="dialog-container">
+    <div class="findings-info">
+      <div class="description">
+        <mat-form-field>
+          <textarea matInput placeholder="Findings Description" matTextareaAutosize matAutosizeMinRows="2" matAutosizeMaxRows="5"></textarea>
+        </mat-form-field>
+      </div>
+      <div class="action-party">
+        <mat-form-field>
+          <input matInput placeholder="Action Party's Department">
+        </mat-form-field>
+        <iap-card-ref [name]="'Action Party\'s HOD'">&lt;System auto populate&gt;</iap-card-ref>
+      </div>
+      <iap-attachment></iap-attachment>
+    </div>
+    <div class="action">
+      <button mat-raised-button color="primary" class="mat-button-lg">SAVE</button>
+      <button mat-raised-button class="mat-button-lg" mat-dialog-close>CANCEL</button>
+    </div>
+  </div>
+</mat-dialog-content>

@@ -1,0 +1,75 @@
+<nav [class.expand]="(isSidebarExpand$ | async) === true">
+  <ul (click)="collapseSideBar()">
+    <li>
+      <a  routerLinkActive="active">
+        <div class="nav-icon-wrapper">
+          <i class="material-icons">home</i>
+          <span>Home</span>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a  routerLinkActive="active" routerLink="/web/admin/master-data">
+        <div class="nav-icon-wrapper">
+          <i class="material-icons">pie_chart</i>
+          <span>Dashboard</span>
+        </div>
+      </a>
+    </li>
+
+    <li>
+      <a routerLink="/web/my-task" routerLinkActive="active">
+        <div class="nav-icon-wrapper">
+          <i class="material-icons">event</i>
+          <span>My Task</span>
+        </div>
+      </a>
+    </li>
+
+    <li>
+      <a  routerLinkActive="active">
+        <div class="nav-icon-wrapper">
+          <i class="material-icons">library_books</i>
+          <span>Annual Assurance Plan</span>
+        </div>
+      </a>
+    </li>
+<!--
+    <li>
+      <a href="">
+        <div class="nav-icon-wrapper">
+          <i class="material-icons">assignment_turned_in</i>
+          <span>Home</span>
+        </div>
+      </a>
+    </li>
+
+    <li>
+      <a href="">
+        <div class="nav-icon-wrapper">
+          <i class="material-icons">notifications</i>
+          <span>Home</span>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="">
+        <div class="nav-icon-wrapper">
+          <i class="material-icons">insert_chart</i>
+          <span>Home</span>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="">
+        <div class="nav-icon-wrapper">
+          <i class="material-icons">settings</i>
+          <span>Home</span>
+        </div>
+      </a>
+    </li>
+     -->
+  </ul>
+</nav>
+
+<div class="nav-back-drop" *ngIf="(isSidebarExpand$ | async) === true" (click)="collapseSideBar()"></div>

@@ -1,0 +1,135 @@
+
+<div class="detail row col-md-12">
+  <div class="col-md-9  col-xs-12">
+    <div class="col-md-12 row">
+      <div class="col-md-6">
+        <div class="description">
+          <div class="time">
+            <span>Actual Start Date</span>
+          </div>
+          <div class="detail">
+            22 Jan 2018
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-6">
+        <div class="description">
+          <div class="time">
+            <span>Actual End Date</span>
+          </div>
+          <div class="detail">
+            22 Jan 2018 Name of location
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <div class="col-md-12 row date">
+      <div class="col-md-6">
+        <div class="description compliant-group">
+          <div class="time">
+            Summary Of Comliance
+          </div>
+          <div class="row">
+            <div class="text col-md-8">
+              No of Compliant
+            </div>
+            <div class="text col-md-2">
+              (20%)
+            </div>
+          </div>
+          <div class="row compliant-group">
+            <div class="text col-md-8">
+              No of Compliant
+            </div>
+            <div class="text col-md-2">
+              (20%)
+            </div>
+          </div>
+          <div class="row">
+            <div class="text col-md-8">
+              No of Compliant
+            </div>
+            <div class="text col-md-2">
+              (20%)
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+          <div class="description">
+            <div class="time">
+              <span>Overal Opinion Rating</span>
+            </div>
+            <div class="detail">
+              Fair
+            </div>
+          </div>
+
+        </div>
+
+    </div>
+    <div class="col-md-12 row">
+      <div class="col-md-6">
+        <div class="description">
+          <div class="time">
+            <span>Approved By</span>
+          </div>
+          <div class="detail">
+            Assurance Description lorem ipsum
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-6">
+        <div class="description">
+          <div class="time">
+            <span>Acknowledge By</span>
+          </div>
+          <div class="detail">
+            Mar
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+  </div>
+  <div  class="col-md-3 col-xs-12">
+    <div class="btn-group">
+      <div *ngIf="!isSubmitter && !isApAssigner" class="detail-action">
+        <button mat-raised-button (click)="openAssessorRatingDialog()" color="primary">SUBMIT</button>
+      </div>
+      <div *ngIf="isApAssigner" class="detail-action">
+        <button mat-raised-button (click)="openAssessorRatingDialog()" color="primary" disabled >CONFIRM ASSIGNMENT</button>
+      </div>
+      <span *ngIf="isLeadAssessor">Submit Findings & Action Items 0 of 2 complete</span>
+      <span *ngIf="isApprover">Approve Findings & Action Items 0 of 2 complete</span>
+      <span *ngIf="isApAssigner">Assign Action Party 0 of 2 complete</span>
+      <div class=" detail-action">
+        <button mat-raised-button *ngIf="!isSubmitter" class="btn-ghost petronas">SAVE PROGRESS</button>
+      </div>
+      <div class="detail-action">
+        <button mat-raised-button *ngIf="isLeadAssessor" class="btn-ghost petronas">PREVIEW MEMO</button>
+      </div>
+    </div>
+
+    <div *ngIf="isSubmitter" class="btn-group">
+      <div class="detail-action">
+        <button mat-raised-button id="edit"  class="btn-ghost petronas">EDIT</button>
+      </div>
+  
+    </div>
+    
+  </div>
+
+
+
+
+  <!-- ***********************CARD ITEM************************* -->

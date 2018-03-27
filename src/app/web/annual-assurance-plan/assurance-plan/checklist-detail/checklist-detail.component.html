@@ -1,0 +1,38 @@
+<iap-breadscrumb></iap-breadscrumb>
+<iap-page-header>
+  Checklist Detail
+</iap-page-header>
+<iap-box class="normal-border row">
+  <div class="col-md-10 col-xs-12 col-sm-9">
+    <div class="group">
+      <span class="multiple-level">1</span>
+      <span class="info bold">
+        Planning
+      </span>
+    </div>
+    <div class="group">
+      <span class="multiple-level">1.1</span>
+      <span class="info">
+        Are employees and contractors trained in chemical handling?
+      </span>
+    </div>
+    <div class="select-box">
+      <mat-radio-group class="col-md-6 col-sm-12">
+        <mat-radio-button color="primary" value="1">Yes</mat-radio-button>
+        <mat-radio-button color="warn"  value="2">No</mat-radio-button>
+        <mat-radio-button value="3">N/A</mat-radio-button>
+      </mat-radio-group>
+    </div>
+    <hr>
+    <div class="footer row">
+      <mat-form-field class="example-full-width">
+        <textarea matInput matTextareaAutosize matAutosizeMinRows="2" matAutosizeMaxRows="5" placeholder="Remarks"></textarea>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="col-md-2 col-xs-12 col-sm-2 action">
+    <button mat-raised-button color="primary">SAVE</button>
+  </div>
+</iap-box>
+
+<iap-list-findings-item></iap-list-findings-item>

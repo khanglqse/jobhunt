@@ -1,0 +1,16 @@
+<iap-small-card-template [color]="'ap'">
+  <header>
+    <iap-card-status [time]="'18:30 19/2/2018'">{{assurance.status}}</iap-card-status>
+    <iap-card-ref [name]="'AP Ref No. (OPU)'">APP/MLNG/2018/DEPTA/FC/001</iap-card-ref>
+    <iap-card-title [name]="'Title'">{{assurance.title}}</iap-card-title>
+  </header>
+  <footer>
+    <iap-card-nav [href]="'/web/annual-assurance-plan/assurance-plan'">Review & Submit</iap-card-nav>
+    <iap-card-info-row>
+      <iap-card-info [name]="'Location'">{{assurance.location}}</iap-card-info>
+      <iap-card-info [name]="'Assurance Type'">{{assurance.type}}</iap-card-info>
+    </iap-card-info-row>
+    <button mat-raised-button (click)="edit()">EDIT</button>
+    <button mat-raised-button (click)="onDelete()">DELETE</button>
+  </footer>
+</iap-small-card-template>

@@ -1,0 +1,15 @@
+<iap-list-header-row>
+  <iap-list-header [name]="'Resource Loading Results: '">3 person</iap-list-header>
+  <iap-list-header-action>
+    <button mat-raised-button class="mat-button-petronas-ghost-small-long">EXPORT</button>
+    <button mat-raised-button class="mat-button-petronas-ghost-small-long" (click)="openFilter()">FILTER</button>
+  </iap-list-header-action>
+</iap-list-header-row>
+<hr>
+<div class="results">
+  <iap-resource-loading-card></iap-resource-loading-card>
+  <iap-resource-loading-card></iap-resource-loading-card>
+  <iap-resource-loading-card></iap-resource-loading-card>
+  <iap-resource-loading-card></iap-resource-loading-card>
+  <iap-resource-loading-card></iap-resource-loading-card>
+</div>

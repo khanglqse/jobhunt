@@ -1,0 +1,233 @@
+<iap-breadscrumb></iap-breadscrumb>
+<iap-page-header>My Tasks</iap-page-header>
+<iap-my-task-content>
+  <div class="overdue">
+    <iap-list-small-card-template>
+
+      <!--my task for Codinator/Reviewer/Approver view of AAP -->
+      <iap-opu-aap *ngIf="user==='coordinator'"></iap-opu-aap>
+
+      <!--my task for Submitter view of AAP -->
+      <iap-small-card-template *ngIf="user ==='submitter'" [color]="'light-blue'">
+        <header>
+          <iap-card-status [time]="'18:30 19/2/2018'">Draft</iap-card-status>
+          <iap-card-ref [name]="'AAP Ref No. (OPU)'">APP/MLNG/2018/DEPTA</iap-card-ref>
+          <iap-card-title [name]="'Title'">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio aut maiores nesciunt magni ipsum tempora sint, natus
+            voluptate quam corporis deserunt quae error consequuntur ab. Ipsum quae laborum exercitationem molestias.</iap-card-title>
+        </header>
+        <footer>
+          <iap-card-nav [href]="'/web/annual-assurance-plan'">Review & Submit</iap-card-nav>
+          <iap-card-info-row>
+            <iap-card-info [name]="'From'">Muhamad Sykuyri</iap-card-info>
+            <iap-card-info [name]="'Due Date'">15 Jan 2017</iap-card-info>
+          </iap-card-info-row>
+        </footer>
+      </iap-small-card-template>
+
+      <!--my task for Lead Assessor view of AP -->
+      <iap-small-card-template *ngIf="user==='leadassessor'" [color]="'violet'">
+        <header>
+          <iap-card-status [time]="'18:30 19/2/2018'">Draft</iap-card-status>
+          <iap-card-ref [name]="'AAP Ref No. (OPU)'">APP/MLNG/2018/DEPTA/FC/0001</iap-card-ref>
+          <iap-card-title [name]="'Title'">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio aut maiores nesciunt magni ipsum tempora sint, natus
+            voluptate quam corporis deserunt quae error consequuntur ab. Ipsum quae laborum exercitationem molestias.</iap-card-title>
+        </header>
+        <footer>
+          <iap-card-nav [href]="'/web/annual-assurance-plan/assurance-plan'">Review & Update</iap-card-nav>
+          <iap-card-info-row>
+            <iap-card-info [name]="'From'">Muhamad Sykuyri</iap-card-info>
+            <iap-card-info [name]="'Due Date'">15 Jan 2017</iap-card-info>
+          </iap-card-info-row>
+        </footer>
+      </iap-small-card-template>
+
+
+      <!--my task for Approver view of Field Work -->
+      <iap-small-card-template *ngIf="user==='approver'" [color]="'violet'">
+        <header>
+          <iap-card-status [time]="'18:30 19/2/2018'">Draft</iap-card-status>
+          <iap-card-ref [name]="'AAP Ref No. (OPU)'">APP/MLNG/2018/DEPTA/FC/0001</iap-card-ref>
+          <iap-card-title [name]="'Title'">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio aut maiores nesciunt magni ipsum tempora sint, natus
+            voluptate quam corporis deserunt quae error consequuntur ab. Ipsum quae laborum exercitationem molestias.</iap-card-title>
+        </header>
+        <footer>
+          <iap-card-nav [href]="'/web/annual-assurance-plan/assurance-plan'">Review & Approve Assurance Report</iap-card-nav>
+          <iap-card-info-row>
+            <iap-card-info [name]="'From'">Muhamad Sykuyri</iap-card-info>
+            <iap-card-info [name]="'Due Date'">15 Jan 2017</iap-card-info>
+          </iap-card-info-row>
+        </footer>
+      </iap-small-card-template>
+
+      <!--my task for action party assigner view of post monitoring -->
+      <iap-small-card-template *ngIf="user==='apassigner'" [color]="'violet'">
+        <header>
+          <iap-card-status [time]="'18:30 19/2/2018'">Draft</iap-card-status>
+          <iap-card-ref [name]="'AAP Ref No. (OPU)'">APP/MLNG/2018/DEPTA/FC/0001</iap-card-ref>
+          <iap-card-title [name]="'Title'">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio aut maiores nesciunt magni ipsum tempora sint, natus
+            voluptate quam corporis deserunt quae error consequuntur ab. Ipsum quae laborum exercitationem molestias.</iap-card-title>
+        </header>
+        <footer>
+          <iap-card-nav [href]="'/web/annual-assurance-plan/assurance-plan'">Excute Action Items</iap-card-nav>
+          <iap-card-info-row>
+            <iap-card-info [name]="'From'">Muhamad Sykuyri</iap-card-info>
+            <iap-card-info [name]="'Due Date'">15 Jan 2017</iap-card-info>
+          </iap-card-info-row>
+        </footer>
+      </iap-small-card-template>
+      
+    </iap-list-small-card-template>
+  </div>
+  <div class="pending ">
+      <iap-list-small-card-template>
+
+        <!--my task for Codinator/Reviewer/Approver view of AAP -->
+        <iap-opu-aap *ngIf="user==='coordinator'"></iap-opu-aap>
+  
+        <!--my task for Submitter view of AAP -->
+        <iap-small-card-template *ngIf="user ==='submitter'" [color]="'light-blue'">
+          <header>
+            <iap-card-status [time]="'18:30 19/2/2018'">Draft</iap-card-status>
+            <iap-card-ref [name]="'AAP Ref No. (OPU)'">APP/MLNG/2018/DEPTA</iap-card-ref>
+            <iap-card-title [name]="'Title'">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio aut maiores nesciunt magni ipsum tempora sint, natus
+              voluptate quam corporis deserunt quae error consequuntur ab. Ipsum quae laborum exercitationem molestias.</iap-card-title>
+          </header>
+          <footer>
+            <iap-card-nav [href]="'/web/annual-assurance-plan'">Review & Submit</iap-card-nav>
+            <iap-card-info-row>
+              <iap-card-info [name]="'From'">Muhamad Sykuyri</iap-card-info>
+              <iap-card-info [name]="'Due Date'">15 Jan 2017</iap-card-info>
+            </iap-card-info-row>
+          </footer>
+        </iap-small-card-template>
+  
+        <!--my task for Lead Assessor view of AP -->
+        <iap-small-card-template *ngIf="user==='leadassessor'" [color]="'violet'">
+          <header>
+            <iap-card-status [time]="'18:30 19/2/2018'">Draft</iap-card-status>
+            <iap-card-ref [name]="'AAP Ref No. (OPU)'">APP/MLNG/2018/DEPTA/FC/0001</iap-card-ref>
+            <iap-card-title [name]="'Title'">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio aut maiores nesciunt magni ipsum tempora sint, natus
+              voluptate quam corporis deserunt quae error consequuntur ab. Ipsum quae laborum exercitationem molestias.</iap-card-title>
+          </header>
+          <footer>
+            <iap-card-nav [href]="'/web/annual-assurance-plan/assurance-plan'">Review & Update</iap-card-nav>
+            <iap-card-info-row>
+              <iap-card-info [name]="'From'">Muhamad Sykuyri</iap-card-info>
+              <iap-card-info [name]="'Due Date'">15 Jan 2017</iap-card-info>
+            </iap-card-info-row>
+          </footer>
+        </iap-small-card-template>
+  
+  
+        <!--my task for Approver view of Field Work -->
+        <iap-small-card-template *ngIf="user==='approver'" [color]="'violet'">
+          <header>
+            <iap-card-status [time]="'18:30 19/2/2018'">Draft</iap-card-status>
+            <iap-card-ref [name]="'AAP Ref No. (OPU)'">APP/MLNG/2018/DEPTA/FC/0001</iap-card-ref>
+            <iap-card-title [name]="'Title'">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio aut maiores nesciunt magni ipsum tempora sint, natus
+              voluptate quam corporis deserunt quae error consequuntur ab. Ipsum quae laborum exercitationem molestias.</iap-card-title>
+          </header>
+          <footer>
+            <iap-card-nav [href]="'/web/annual-assurance-plan/assurance-plan'">Review & Approve Assurance Report</iap-card-nav>
+            <iap-card-info-row>
+              <iap-card-info [name]="'From'">Muhamad Sykuyri</iap-card-info>
+              <iap-card-info [name]="'Due Date'">15 Jan 2017</iap-card-info>
+            </iap-card-info-row>
+          </footer>
+        </iap-small-card-template>
+  
+       <!--my task for action party assigner view of post monitoring -->
+      <iap-small-card-template *ngIf="user==='apassigner'" [color]="'violet'">
+        <header>
+          <iap-card-status [time]="'18:30 19/2/2018'">Draft</iap-card-status>
+          <iap-card-ref [name]="'AAP Ref No. (OPU)'">APP/MLNG/2018/DEPTA/FC/0001</iap-card-ref>
+          <iap-card-title [name]="'Title'">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio aut maiores nesciunt magni ipsum tempora sint, natus
+            voluptate quam corporis deserunt quae error consequuntur ab. Ipsum quae laborum exercitationem molestias.</iap-card-title>
+        </header>
+        <footer>
+          <iap-card-nav [href]="'/web/annual-assurance-plan/assurance-plan'">Excute Action Items</iap-card-nav>
+          <iap-card-info-row>
+            <iap-card-info [name]="'From'">Muhamad Sykuyri</iap-card-info>
+            <iap-card-info [name]="'Due Date'">15 Jan 2017</iap-card-info>
+          </iap-card-info-row>
+        </footer>
+      </iap-small-card-template>
+    </iap-list-small-card-template>
+  </div>
+  <div class="all">
+      <iap-list-small-card-template>
+
+        <!--my task for Codinator/Reviewer/Approver view of AAP -->
+        <iap-opu-aap *ngIf="user==='coordinator'"></iap-opu-aap>
+  
+        <!--my task for Submitter view of AAP -->
+        <iap-small-card-template *ngIf="user ==='submitter'" [color]="'light-blue'">
+          <header>
+            <iap-card-status [time]="'18:30 19/2/2018'">Draft</iap-card-status>
+            <iap-card-ref [name]="'AAP Ref No. (OPU)'">APP/MLNG/2018/DEPTA</iap-card-ref>
+            <iap-card-title [name]="'Title'">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio aut maiores nesciunt magni ipsum tempora sint, natus
+              voluptate quam corporis deserunt quae error consequuntur ab. Ipsum quae laborum exercitationem molestias.</iap-card-title>
+          </header>
+          <footer>
+            <iap-card-nav [href]="'/web/annual-assurance-plan'">Review & Submit</iap-card-nav>
+            <iap-card-info-row>
+              <iap-card-info [name]="'From'">Muhamad Sykuyri</iap-card-info>
+              <iap-card-info [name]="'Due Date'">15 Jan 2017</iap-card-info>
+            </iap-card-info-row>
+          </footer>
+        </iap-small-card-template>
+  
+        <!--my task for Lead Assessor view of AP -->
+        <iap-small-card-template *ngIf="user==='leadassessor'" [color]="'violet'">
+          <header>
+            <iap-card-status [time]="'18:30 19/2/2018'">Draft</iap-card-status>
+            <iap-card-ref [name]="'AAP Ref No. (OPU)'">APP/MLNG/2018/DEPTA/FC/0001</iap-card-ref>
+            <iap-card-title [name]="'Title'">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio aut maiores nesciunt magni ipsum tempora sint, natus
+              voluptate quam corporis deserunt quae error consequuntur ab. Ipsum quae laborum exercitationem molestias.</iap-card-title>
+          </header>
+          <footer>
+            <iap-card-nav [href]="'/web/annual-assurance-plan/assurance-plan'">Review & Update</iap-card-nav>
+            <iap-card-info-row>
+              <iap-card-info [name]="'From'">Muhamad Sykuyri</iap-card-info>
+              <iap-card-info [name]="'Due Date'">15 Jan 2017</iap-card-info>
+            </iap-card-info-row>
+          </footer>
+        </iap-small-card-template>
+  
+  
+        <!--my task for Approver view of Field Work -->
+        <iap-small-card-template *ngIf="user==='approver'" [color]="'violet'">
+          <header>
+            <iap-card-status [time]="'18:30 19/2/2018'">Draft</iap-card-status>
+            <iap-card-ref [name]="'AAP Ref No. (OPU)'">APP/MLNG/2018/DEPTA/FC/0001</iap-card-ref>
+            <iap-card-title [name]="'Title'">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio aut maiores nesciunt magni ipsum tempora sint, natus
+              voluptate quam corporis deserunt quae error consequuntur ab. Ipsum quae laborum exercitationem molestias.</iap-card-title>
+          </header>
+          <footer>
+            <iap-card-nav [href]="'/web/annual-assurance-plan/assurance-plan'">Review & Approve Assurance Report</iap-card-nav>
+            <iap-card-info-row>
+              <iap-card-info [name]="'From'">Muhamad Sykuyri</iap-card-info>
+              <iap-card-info [name]="'Due Date'">15 Jan 2017</iap-card-info>
+            </iap-card-info-row>
+          </footer>
+        </iap-small-card-template>
+  
+       <!--my task for action party assigner view of post monitoring -->
+      <iap-small-card-template *ngIf="user==='apassigner'" [color]="'violet'">
+        <header>
+          <iap-card-status [time]="'18:30 19/2/2018'">Draft</iap-card-status>
+          <iap-card-ref [name]="'AAP Ref No. (OPU)'">APP/MLNG/2018/DEPTA/FC/0001</iap-card-ref>
+          <iap-card-title [name]="'Title'">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio aut maiores nesciunt magni ipsum tempora sint, natus
+            voluptate quam corporis deserunt quae error consequuntur ab. Ipsum quae laborum exercitationem molestias.</iap-card-title>
+        </header>
+        <footer>
+          <iap-card-nav [href]="'/web/annual-assurance-plan/assurance-plan'">Excute Action Items</iap-card-nav>
+          <iap-card-info-row>
+            <iap-card-info [name]="'From'">Muhamad Sykuyri</iap-card-info>
+            <iap-card-info [name]="'Due Date'">15 Jan 2017</iap-card-info>
+          </iap-card-info-row>
+        </footer>
+      </iap-small-card-template>
+    </iap-list-small-card-template>
+  </div>
+</iap-my-task-content>

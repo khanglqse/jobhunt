@@ -1,0 +1,65 @@
+  <div class="search-criteria">
+    <mat-form-field>
+      <mat-select placeholder="Assurance Year">
+        <mat-option>Option 1</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-select placeholder="Assessor OPU/Company">
+        <mat-option>Option 1</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-select placeholder="Assessor Department">
+        <mat-option>Option 1</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-select placeholder="Assessor Role">
+        <mat-option>Option 1</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <ng-container *ngIf="isAdvanced">
+      <mat-form-field>
+        <mat-select placeholder="Location">
+          <mat-option>Option 1</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-select placeholder="Assurance Line">
+          <mat-option>Option 1</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-select placeholder="Assurance Type">
+          <mat-option>Option 1</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-select placeholder="Risk Area">
+          <mat-option>Option 1</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-select placeholder="Assurance Sub-Type">
+          <mat-option>Option 1</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-select placeholder="Assurance Provider">
+          <mat-option>Option 1</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-select placeholder="Assessee OPU/Company">
+          <mat-option>Option 1</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </ng-container>
+  </div>
+  <div class="search-action">
+    <button mat-raised-button color="primary" cdkFocusInitial>APPLY</button>
+    <button class="mat-button-petronas-ghost" mat-raised-button>RESET</button>
+  </div>
+<button class="mat-button-petronas-ghost-small" mat-raised-button *ngIf="!isAdvanced" (click)="toggleFilterAdvanced()">Show Advanced Filters</button>
+<button class="mat-button-petronas-ghost-small" mat-raised-button *ngIf="isAdvanced" (click)="toggleFilterAdvanced()">Hide Advanced Filters</button>

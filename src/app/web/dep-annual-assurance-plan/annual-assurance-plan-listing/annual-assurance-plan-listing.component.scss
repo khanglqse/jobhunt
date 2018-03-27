@@ -1,0 +1,80 @@
+@import 'variable';
+@import 'mixin';
+$color-annual-item: rgba($color: #000000, $alpha: 0.48);
+.annual-item-container {
+  padding-top: 10px;
+  margin-bottom: 30px;
+  background: white;
+  border-bottom: 1px solid gainsboro;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .list-item-info {
+    flex-basis: 35%;
+    flex-grow: 1;
+    padding: 0 24px;
+    .item-info {
+      margin-bottom: 20px;
+      >p {
+        margin: 0;
+        &:last-child {
+          color: $color-petronas;
+          font-weight: bold;
+          font-size: 1.3em;
+          word-break: break-all;
+        }
+      }
+    }
+    @include mediaExtraSmallScreen {
+      flex-basis: 100%;
+      .item-info {
+        text-align: center;
+      }
+    }
+  }
+  .item-action {
+    flex-basis: 15%;
+    margin-right: 5%;
+    display: flex;
+    flex-direction: column;
+    @include mediaExtraSmallScreen {
+      margin-right: 0;
+    }
+    button {
+      padding: 8px 56px;
+      font-weight: bold;
+      color: white;
+      &[disabled] {
+        background: $color-petronas;
+        opacity: 0.5;
+      }
+      &:last-child {
+        margin: 30px 0px;
+      }
+    }
+    p {
+      margin: 0;
+      &:first-of-type {
+        margin-top: 10px;
+        font-weight: bold;
+      }
+    }
+    @include mediaSmallScreen {
+      flex-basis: 100% !important;
+      flex-direction: row;
+      margin-bottom: 24px;
+      justify-content: flex-end;
+      button {
+        margin: 0;
+        margin-right: 16px;
+        &:last-child {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+      }
+    }
+    @include mediaExtraSmallScreen {
+      flex-basis: 100% !important;
+    }
+  }
+}

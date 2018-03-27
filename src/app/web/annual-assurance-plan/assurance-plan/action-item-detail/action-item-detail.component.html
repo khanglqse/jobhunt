@@ -1,0 +1,74 @@
+<iap-breadscrumb></iap-breadscrumb>
+<iap-page-header>Action Item Detail</iap-page-header>
+<iap-box class="none-shadow">
+  <div class="action-detail">
+    <iap-card-ref [name]="'Action Item Ref No'">AAP/MLNG/2018/DEPA/FC/0001/FIND/1/ACT/1</iap-card-ref>
+    <iap-card-info class="no-elipsis" [name]="'Action Description'">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem veritatis voluptatum aliquam vel cum quo et aliquid dolorem
+      laboriosam. Aliquid placeat ex perferendis, ratione voluptas magni dicta ab quibusdam ad omnis laudantium voluptatem
+      ipsa necessitatibus cum hic aspernatur distinctio quaerat consequuntur, non sequi tempore eos aut natus. Quisquam,
+      asperiores quo.</iap-card-info>
+    <iap-card-info [name]="'Action Item Status'">Open</iap-card-info>
+    <iap-card-info-row>
+      <iap-card-info [name]="'Action Party\'s Department'">Department Name 001</iap-card-info>
+      <iap-card-info [name]="'Action Party\'s HOD'">HOD Name Surname 001</iap-card-info>
+    </iap-card-info-row>
+    <iap-card-info-row>
+      <iap-card-info [name]="'Action Party'">AP Name Surname 001</iap-card-info>
+      <iap-card-info [name]="'Action Verify'">Verifier Name Surname</iap-card-info>
+    </iap-card-info-row>
+    <div class="due-date">
+      <iap-card-info [name]="'Due Date'">00 Mth 2018</iap-card-info>
+      <button mat-raised-button class="mat-button-petronas-ghost-small" (click)="requestExtension()">
+        REQUEST DUE DATE EXTENSION
+      </button>
+    </div>
+    <hr>
+    <!-- <form> -->
+      <div class="small-field">
+        <mat-form-field>
+          <mat-select placeholder="Completion Status">
+            <mat-option>
+              Option 1
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker" placeholder="Progress Update Date">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput placeholder="Completion Percentage (%)" iapInputNumber maxlength="2">
+        </mat-form-field>
+      </div>
+      <mat-form-field>
+        <textarea matInput placeholder="Progress Remark" required matTextareaAutosize matAutosizeMinRows="2" matAutosizeMaxRows="5"></textarea>
+      </mat-form-field>
+    <!-- </form> -->
+
+    <div class="progress-attachment">
+      <header>
+        <iap-label>Progress Update Attachment (0)</iap-label>
+        <button mat-raised-button class="mat-button-petronas-ghost-small">
+          ADD ATTACHMENT
+        </button>
+      </header>
+      <iap-attachment-item></iap-attachment-item>
+      <iap-attachment-item></iap-attachment-item>
+      <iap-attachment-item></iap-attachment-item>
+    </div>
+
+    <div class="action-attachment">
+      <header>
+        <iap-label>Action Item Attachment (0)</iap-label>
+      </header>
+      <iap-attachment-item></iap-attachment-item>
+      <iap-attachment-item></iap-attachment-item>
+      <iap-attachment-item></iap-attachment-item>
+    </div>
+  </div>
+  <div class="action">
+    <button mat-raised-button color="primary">SAVE</button>
+  </div>
+</iap-box>

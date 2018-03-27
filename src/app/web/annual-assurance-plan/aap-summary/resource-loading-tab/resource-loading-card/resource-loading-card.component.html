@@ -1,0 +1,28 @@
+<iap-box class="left-bordered gold">
+  <div class="header">
+    <p class="name">
+      <i class="material-icons">person</i>
+      <span [title]="data.name">{{data.name}}</span>
+    </p>
+    <div class="ref-list-container">
+      <p class="ref-list" *ngFor="let refNo of data.refNos">
+        <a>{{refNo}} ></a>
+      </p>
+    </div>
+  </div>
+  <div class="content">
+    <div class="month-data" *ngFor="let month of months; let i = index">
+      <div class="month-name">
+        <span>{{month}}</span>
+      </div>
+      <div class="data">
+        <strong *ngIf="data.resources[i] === 0">-</strong>
+        <strong *ngIf="data.resources[i] !== 0" [ngClass]="{
+          'positive':data.resources[i] <= 10,
+          'negative':data.resources[i] > 10}">
+          {{data.resources[i]}}
+        </strong>
+      </div>
+    </div>
+  </div>
+</iap-box>

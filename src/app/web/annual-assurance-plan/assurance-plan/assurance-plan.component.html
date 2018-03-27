@@ -1,0 +1,45 @@
+<iap-breadscrumb></iap-breadscrumb>
+<iap-progress-bar-small></iap-progress-bar-small>
+<iap-page-header>
+  Assurance Plan
+</iap-page-header>
+
+<div class="annual-item-container">
+  <div class="list-item-info">
+    <div class="item-info">
+      <p>Reference No</p>
+      <p>ANNUALPLAN/MLNG/2018/DEPTA/FC/0001</p>
+    </div>
+    <div class="item-info">
+      <p>Assurance Year</p>
+      <p>2018</p>
+    </div>
+  </div>
+  <div class="list-item-info">
+    <div class="item-info">
+      <p>Assurance Category</p>
+      <p>Planned Assurance</p>
+    </div>
+    <div class="item-info">
+      <p>Assurance Line</p>
+      <p>First Line</p>
+    </div>
+  </div>
+  <div class="list-item-info">
+    <div class="item-info">
+      <p>Status</p>
+      <p>&lt;system auto populate&gt;</p>
+    </div>
+  </div>
+</div>
+<iap-box class="normal-border">
+  <iap-assurance-tab-content [isSubmitter]="isSubmitter" (selectedIndex)="changeListContent($event)"></iap-assurance-tab-content>
+</iap-box>
+
+<iap-list-checklist-item *ngIf="selectedTab === 1 && leadassessor"></iap-list-checklist-item>
+<iap-list-assessor *ngIf="selectedTab === 0 && leadassessor"></iap-list-assessor>
+<iap-cap-card *ngIf="selectedTab === 1 && apAssigner" class="col-md-12"></iap-cap-card>
+
+
+<iap-list-fieldwork-reporting-checklist *ngIf="selectedTab === 1 && approver"></iap-list-fieldwork-reporting-checklist>
+<!-- <div style="min-height: 2000px"></div> -->

@@ -1,0 +1,166 @@
+<div class="detail row col-md-12">
+  <div class="col-md-9  col-xs-12">
+    <div class="col-md-12 row">
+      <div class="col-md-6 col-sm-6">
+        <div class="description">
+          <div class="time">
+            <span>Assurance title</span>
+          </div>
+          <div class="detail">
+            Lorem assurance title display
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-6 col-sm-6">
+        <div class="description">
+          <div class="time">
+            <span>Location</span>
+          </div>
+          <div class="detail">
+            Name of location
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <div *ngIf="!isSubmitter" class="col-md-12 row">
+      <div class="col-md-6  col-sm-6">
+        <div class="description">
+          <div class="time">
+            <span>Risk Area</span>
+          </div>
+          <div class="detail">
+            HSE
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-6  col-sm-6">
+        <div class="description">
+          <div class="time">
+            <span>Month</span>
+          </div>
+          <div class="detail">
+            Jannuary
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <div class="col-md-12 row">
+      <div class="col-md-6  col-sm-6">
+        <div class="description">
+          <div class="time">
+            <span>Assurance Description</span>
+          </div>
+          <div class="detail">
+            Assurance Description lorem ipsum
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-6  col-sm-6">
+        <div class="description">
+          <div class="time">
+            <span>Assurance Type</span>
+          </div>
+          <div class="detail">
+            Functional Checklist
+          </div>
+          <div class="type">
+            <button mat-raised-button class="btn-ghost petronas btn-radius">View Checklist</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div *ngIf="!isSubmitter" class="col-md-12 row">
+      <div class="col-md-6 col-sm-6">
+        <div class="description">
+          <div class="time">
+            <span>OPU</span>
+          </div>
+          <div class="detail">
+            System auto populate
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-6 col-sm-6">
+        <div class="description">
+          <div class="time">
+            <span>Dept</span>
+          </div>
+          <div class="detail">
+            System auto populate
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+    <ng-container *ngIf="isSubmitter; else assessor">
+      <div class="description">
+        <div class="time">
+          <span>Assurance Frequency</span>
+        </div>
+        <div class="detail">
+          Planed
+        </div>
+        <div class="frequency-plan row">
+          <div class="monthly-plan col-md-1 col-sm-4 col-xs-6" *ngFor="let item of frequency">
+            <label class="">{{item.month}}</label>
+            <div>{{item.planned || '-'}} </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+    <ng-template #assessor>
+      <div class=" row footer">
+        <div class="description col-md-6 col-sm-6">
+          <div class="time">
+            <span>Lead Assessor</span>
+          </div>
+          <div class="detail">
+            Name of Lead Assessor
+          </div>
+
+        </div>
+        <div class="description col-md-6 col-sm-6">
+          <mat-form-field>
+            <textarea matInput placeholder="Remarks" matTextareaAutosize matAutosizeMinRows="2" matAutosizeMaxRows="5"></textarea>
+          </mat-form-field>
+        </div>
+      </div>
+    </ng-template>
+
+  </div>
+  <div  class="col-md-3 col-xs-12">
+    <div *ngIf="!isSubmitter" class="btn-group">
+      <div class="detail-action">
+        <button mat-raised-button color="primary">SUBMIT</button>
+      </div>
+      <span>Update plan and assign assesors 0 of 2 complete</span>
+      <div class=" detail-action">
+        <button mat-raised-button   class="btn-ghost petronas">SAVE</button>
+      </div>
+      <div class="detail-action">
+        <button mat-raised-button   class="btn-ghost petronas">PREVIEW MEMO</button>
+      </div>
+    </div>
+
+    <div *ngIf="isSubmitter" class="btn-group">
+      <div class="detail-action">
+        <button mat-raised-button  id="edit"  class="btn-ghost petronas">EDIT</button>
+      </div>
+  
+    </div>
+    
+  </div>
+
+
+</div>

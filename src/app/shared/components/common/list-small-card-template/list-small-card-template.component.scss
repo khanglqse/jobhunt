@@ -1,0 +1,32 @@
+@import 'variable';
+@import 'mixin';
+$gap: 15px;
+:host {
+  display: flex;
+  flex-wrap: wrap;
+  > ::ng-deep {
+    * {
+      width: calc((100% - #{$gap * 2})/3);
+      &:not(:nth-child(3n + 3)) {
+        margin-right: $gap;
+      }
+      @include mediaSmallScreen {
+        width: calc((100% - #{$gap})/2);
+        margin-right: 0;
+        &:not(:nth-child(3n + 3)) {
+          margin-right: 0;
+        }
+        &:not(:nth-child(2n + 2)) {
+          margin-right: $gap;
+        }
+      }
+      @include mediaExtraSmallScreen {
+        width: 100%;
+        margin-right: 0 !important;
+      }
+      @include mediaIEOnly {
+        width: calc((100% - #{$gap * 2} - 10px)/3);
+      }
+    }
+  }
+}

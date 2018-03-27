@@ -1,0 +1,29 @@
+<header>
+  <h2>List of Department Submissions:
+    <span>20 person</span>
+  </h2>
+  <div class="action">
+    <p>
+      View as:
+    </p>
+    <button mat-icon-button (click)="isChartView = false" [class.active]="isChartView === false">
+      <mat-icon>event_note</mat-icon>
+    </button>
+    <button mat-icon-button (click)="isChartView = true" [class.active]="isChartView === true">
+      <mat-icon>equalizer</mat-icon>
+    </button>
+  </div>
+</header>
+
+<ng-container class="chart-view" *ngIf="isChartView; else deptSubmission">
+  <iap-submission-summary [data]="data1"></iap-submission-summary>
+  <iap-submission-summary [data]="data2"></iap-submission-summary>
+  <iap-submission-summary [data]="data3"></iap-submission-summary>
+  <iap-submission-summary [data]="data4"></iap-submission-summary>
+</ng-container>
+<ng-template #deptSubmission>
+  <div class="card-view">
+    <iap-department-submission></iap-department-submission>
+    <iap-department-submission></iap-department-submission>
+  </div>
+</ng-template>

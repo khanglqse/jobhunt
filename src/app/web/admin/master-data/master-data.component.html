@@ -1,0 +1,35 @@
+<!-- <button mat-raised-button>
+  <a routerLink="/web/annual-assurance-plan/summary/calendar">Calendar</a>
+</button>
+<button mat-raised-button>
+  <a routerLink="/web/annual-assurance-plan/summary/submission">Submission</a>
+</button>
+
+<a routerLink="/web/annual-assurance-plan/summary/resource">
+  <button mat-raised-button>RESOURCE</button>
+</a>
+<a routerLink="/web/annual-assurance-plan/summary/calendar">
+  <button mat-raised-button>CALENDAR</button>
+</a>
+<a routerLink="/web/annual-assurance-plan/summary/submission">
+  <button mat-raised-button>SUBMISSION</button>
+</a> -->
+<div class="select-box">
+    <mat-form-field>
+        <mat-select placeholder="Manage master data" [(value)]="selectedValue" name="selectedValue">
+          <mat-option *ngFor="let masterdata of manageList" [value]="masterdata.value">
+            {{masterdata.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+</div>
+<div class="content" [ngSwitch]="selectedValue">
+  <div *ngSwitchCase="'data1'">
+      <iap-assurance-plan-frequency></iap-assurance-plan-frequency>
+  </div>
+  <div *ngSwitchCase="'data2'">
+      <iap-user-role></iap-user-role>
+  </div>
+</div>
+
+

@@ -1,0 +1,20 @@
+<header>
+  <h3>List of Annual Assurance Plans:
+    <span class="number">2 items</span>
+  </h3>
+  <div class="action">
+    <a routerLink="/web/annual-assurance-plan/summary/resource">
+      <button mat-raised-button class="mat-button-petronas-ghost-small">RESOURCE LOADING</button>
+    </a>
+    <a routerLink="/web/annual-assurance-plan/summary/calendar">
+      <button mat-raised-button class="mat-button-petronas-ghost-small">VIEW IN CALENDAR</button>
+    </a>
+    <a routerLink="/web/annual-assurance-plan/summary/submission">
+      <button mat-raised-button class="mat-button-petronas-ghost-small">SUBMISSION SUMMARY</button>
+    </a>
+  </div>
+</header>
+
+<iap-list-small-card-template>
+  <iap-dept-aap></iap-dept-aap>
+</iap-list-small-card-template>
